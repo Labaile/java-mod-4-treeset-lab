@@ -8,13 +8,18 @@ public class Main {
         System.out.println(res); // [34, 36, 37, 45, 56]
     }
 
-    public static TreeSet<Integer> getNums(int[] nums) {
+    public static ArrayList<Integer> getNums(int[] nums) {
         // your code here
         TreeSet<Integer> numTreeSet = new TreeSet<>();
         ArrayList<Integer> numList = new ArrayList<>();
+
         for (Integer num : nums) {
-           numTreeSet.tailSet(25);
+            if (num > 25) {
+                numTreeSet.add(num);
+            }
         }
+        numList.addAll(numTreeSet);
+
         return numList;
         //return null
 
